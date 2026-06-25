@@ -254,7 +254,6 @@ body{
 .act[data-seq="fbo-dawn"] .act__stage{background-image:url("assets/posters/fbo-dawn.jpg")}
 .act[data-seq="fleet-tarmac"] .act__stage{background-image:url("assets/posters/fleet-tarmac.jpg")}
 .act[data-seq="vault-route"] .act__stage{background-image:url("assets/posters/vault-route.jpg")}
-.act[data-seq="global-reach"] .act__stage{background-image:url("assets/posters/global-reach.jpg")}
 .act[data-seq="wheels-up-cta"] .act__stage{background-image:url("assets/posters/wheels-up-cta.jpg")}
 /* when frames exist the canvas paints opaque over the poster; when count=0 the
    canvas stays transparent-to-bg and the poster shows. Make a 0-frame canvas see-through. */
