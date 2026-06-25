@@ -703,3 +703,25 @@ body{
   .topbar__ticker::before{animation:none;opacity:1}
   .preloader::before{animation:none}
 }
+
+/* ============================================================
+   STILL bands — static cinematic stills. Only the Hero Ascent
+   film animates; every other chapter is a single still frame, so
+   the site reads as ONE animation. (scrim rgba = --bg #0A0C0F)
+   ============================================================ */
+.still{position:relative;min-height:clamp(64vh,88vh,940px);display:flex;align-items:center;overflow:hidden;background:#000;isolation:isolate}
+.still__bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0;filter:brightness(.72) contrast(1.05);transform:scale(1.04)}
+.still__scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(10,12,15,.94),rgba(10,12,15,.55) 52%,rgba(10,12,15,.16)),
+  linear-gradient(180deg,rgba(10,12,15,.5),transparent 32%,rgba(10,12,15,.68))}
+.still__scrim--strong{background:linear-gradient(90deg,rgba(10,12,15,.96),rgba(10,12,15,.68) 52%,rgba(10,12,15,.32)),
+  linear-gradient(180deg,rgba(10,12,15,.62),rgba(10,12,15,.36) 40%,rgba(10,12,15,.82))}
+.still__inner{position:relative;z-index:2;width:100%;max-width:var(--maxw,1340px);margin:0 auto;
+  padding:clamp(2rem,6vh,4rem) clamp(1.1rem,4vw,2.6rem);display:flex;flex-direction:column;align-items:flex-start;gap:1.2rem;text-align:left}
+.still__inner .statement,.still__inner .bignum{margin:0}
+.still__inner .cap__sub{max-width:54ch;margin:0}
+.still__inner .btn-row{margin-top:.6rem}
+.still .readout{background:rgba(8,10,13,.42);backdrop-filter:blur(3px)}
+.still__label{position:absolute;left:clamp(1.1rem,4vw,2.6rem);bottom:1.5rem;z-index:2;
+  font-family:'Space Mono',ui-monospace,monospace;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-dim)}
+@media(max-width:640px){.still{min-height:80vh}}
